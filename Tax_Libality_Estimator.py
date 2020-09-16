@@ -1,8 +1,9 @@
+# Tax calculator estimater
 
 income = int(input("What is your 2019 taxable income? "))
 
-
-
+# Each of thse if statements determines the tax branch from which
+# the estimation will be calculated. Based on the user input.
 if income >= 510300:
     tax_liability = 153798 + ((income - 510300) * .37)
     tax_rate = (tax_liability / income) * 100
@@ -36,7 +37,8 @@ elif income < 9700 :
 print(f"Your tax liability is, {tax_liability}")
 print(f"Your effective tax rate is ${tax_rate}")
 
-
+# This branch is hypothetical and is made to show what somemone making 10000000
+# would have to pay if it was actually implemented in the US tax system.
 if income > 10000000:
     new_tax_liability = 3664987 + ((income - 10000000 ) * .70)
     new_tax_rate = (new_tax_liability / income) * 100
